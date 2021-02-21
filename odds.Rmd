@@ -1,0 +1,66 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.9.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+```{python}
+####นายมิตรภาพ สกุลพิสุทธิ์ (มีน)
+```
+
+```{python}
+def convert(a):
+    con = ""
+    for c in a:
+        x = ord(c)
+        if(x >=3585 and x<=3630 or x >=97 and x<=122 or x >=65 and x<=90):
+            x += 1
+        y = chr(x)
+        con += y
+    return con
+```
+
+```{python}
+MyRanking = '''A VHF radio
+เพราะว่าใช้ติดต่อขอความช่วงเหลือจากภายนอกได้ ถ้าไม่มีอาจจะทำให้หาเรายากขึ้น 
+
+A water container
+เพราะมนุษย์ต้องการน้ำจืด ถ้าไม่มีน้ำอาจจะไม่รอด
+
+Emergency rations
+เพราะอาหารเป็นสิ่งที่จำเป็นต่อการดำรงชีวิต
+'''
+GroupRanking = '''A mosquito net | 12
+A can of petrol | 10
+A water container | 5
+A shaving mirror | 7
+A sextant | 15
+Emergency rations | 1
+A sea chart | 9
+A floating seat or cushion | 3
+A rope | 4
+Some chocolate bars | 2
+A waterproof sheet | 6
+A fishing rod | 11
+Shark repellent | 13
+A bottle of rum | 8
+A VHF radio | 14''' 
+```
+
+```{python}
+print("My Ranking")
+print(convert(MyRanking))
+```
+
+```{python}
+print("Group 2 Ranking")
+print(convert(GroupRanking))
+```
